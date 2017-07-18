@@ -1,0 +1,286 @@
+@import "css/bootstrap.min.css";
+@import "css/jasny-bootstrap.min.css";
+@import "css/animate.css";
+@import "css/slick.css";
+@import "css/slick-theme.css";
+@import "css/hover.css";
+@import "css/portfolio.css";
+@import "fonts/font-awesome/css/font-awesome.min.css";
+@import "css/navmenu-reveal.css";
+
+/* <fonts> */
+
+@font-face {
+  font-family: 'texgyreherosbold';
+  src: url('fonts/heros/bold/texgyreheros-bold-webfont.eot');
+  src: url('fonts/heros/bold/texgyreheros-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/heros/bold/texgyreheros-bold-webfont.woff') format('woff'), url('fonts/heros/bold/texgyreheros-bold-webfont.ttf') format('truetype'), url('fonts/heros/bold/texgyreheros-bold-webfont.svg#texgyreherosbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'troikaregular';
+    src: url('fonts/troika/troika-webfont.eot');
+    src: url('fonts/troika/troika-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/troika/troika-webfont.woff') format('woff'),
+         url('fonts/troika/troika-webfont.ttf') format('truetype'),
+         url('fonts/troika/troika-webfont.svg#troikaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* </fonts> */
+
+
+/* <Global Styles> */
+
+a,
+a:focus,
+a:hover {
+  color: #F0FFFF;
+}
+
+/* Custom default button */
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #5a5a5a;
+  text-shadow: none;
+  /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  height: 100%;
+  background-color: #333;
+  font-family: 'texgyreherosbold';
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+.inner {
+  align-self: center;
+}
+.text-align-center {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  body {
+    line-height: 1.6;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    line-height: 1.2;
+  }
+}
+hr.hr-light {
+  border: 0;
+  height: 2px;
+  width: 40%;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+hr.hr-dark {
+  border: 0;
+  height: 2px;
+  width: 40%;
+  background-image: linear-gradient(to right, rgba(90, 90, 90, 0), rgba(90, 90, 90, 1), rgba(90, 90, 90, 0));
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+/* </Global Styles> */
+
+
+/* <Layout> */
+
+#info-slate-1 {
+  min-height: 30em;
+  background-image: url('images/paper.png');
+}
+#info-slate-1 h1 {
+  font-size: 3.0em;
+}
+#info-slate-2 {
+  color: #F0FFFF;
+  min-height: 25em;
+  background-image: url('images/mochaGrunge.png');
+}
+#info-slate-2 h1 {
+  font-size: 3.0em;
+}
+.about-us {
+  background-color: #F0FFFF;
+  min-height: 20em;
+  width: 100%;
+  margin-bottom: 2em;
+  color: #5a5a5a;
+  padding: 2em;
+  text-align: justify;
+}
+#info-slate-3 {
+  color: #F0FFFF;
+  min-height: 38em;
+  background-image: url('images/paper.png');
+}
+#info-slate-4 {
+  color: #F0FFFF;
+  min-height: 15em;
+  background-color: #5a5a5a;
+}
+#info-slate-4 h1 {
+  font-size: 3.0em;
+}
+
+#info-slate-5 {
+  color: #5a5a5a;
+  min-height: 25em;
+  background-color:  #F0FFFF;
+}
+
+/* </Layout> */
+
+
+/* <Components> */
+
+.os-animation{
+  opacity: 0;
+}
+
+.os-animation.animated{
+    opacity: 1;
+}
+
+/* Carousel */
+
+.carousel {
+  height: 45em;
+}
+.carousel-caption {
+  z-index: 10;
+  margin-bottom: 5em;
+}
+@media (max-width: 768px) {
+  .carousel-caption h1 {
+    margin-bottom: 5.0em;
+    font-size: 4.0em;
+    font-family: 'troikaregular';
+  }
+  .carousel-caption p {
+    margin-bottom: 2.0em;
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 768px) {
+  .carousel-caption h1 {
+    margin-bottom: 2.8em;
+    font-size: 5.2em;
+    font-family: 'troikaregular';
+  }
+  .carousel-caption p {
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+  }
+}
+.drop-shadow {
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+}
+.carousel .item {
+  height: 45em;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  min-width: 100%;
+  min-height: 110%;
+  overflow: hidden;
+}
+.css-filters {
+  -webkit-filter: brightness(50%);
+  grayscale(100%);
+  filter: brightness(50%);
+  grayscale(100%);
+}
+#saturate {
+  -webkit-filter: saturate(3);
+  filter: saturate(3);
+}
+#grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+#contrast {
+  -webkit-filter: contrast(160%);
+  filter: contrast(160%);
+}
+#brightness {
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+}
+#blur {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+#invert {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+#sepia {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+}
+#huerotate {
+  -webkit-filter: hue-rotate(180deg);
+  filter: hue-rotate(180deg);
+}
+#rss.opacity {
+  -webkit-filter: opacity(50%);
+  filter: opacity(50%);
+}
+.carousel-control {
+  background: none !important;
+  filter: none !important;
+  progid: none !important;
+}
+
+/* Portfolio */
+
+.portfolio-item {
+  margin-bottom: 25px;
+  width: 100%;
+}
+.client-slide img {
+  height: auto;
+  width: 15em;
+  margin: 0 auto;
+}
+
+.portfolio-slide{
+  margin: 2em;
+}
+
+.portfolio-slide img {
+  height: 20em;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* </Components> */
